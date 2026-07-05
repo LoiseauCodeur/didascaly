@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  api:
+    image: mcr.microsoft.com/dotnet/sdk:8.0 # Utilise le SDK .NET 8
+    container_name: didascaly-api
+    volumes:
+      - ./api:/app
+    working_dir: /app/Didascaly.Api
+    ports:
+      - "5000:5000"
+      - "5001:5001"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:5000
+    command: dotnet watch run --urls http://0.0.0.0:5000

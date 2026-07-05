@@ -1,0 +1,43 @@
+services:
+  # 1. Le conteneur de la base de données
+  didascaly-db:
+    image: postgres:16-alpine
+    container_name: didascaly-db
+    environment:
+      POSTGRES_USER: didascaly_user
+      POSTGRES_PASSWORD: didascaly_secure_password
+      POSTGRES_DB: didascaly_dev_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - didascaly-network
+
+  # 2. Le conteneur de ton backend .NET
+  didascaly-api:
+    container_name: didascaly-api
+    build:
+      context: ./API
+      dockerfile: Didascaly.Api/Dockerfile.dev
+    volumes:
+      - ./API:/app
+    working_dir: /app/Didascaly.Api
+    command: dotnet watch --non-interactive
+    ports:
+      - "5000:5000"
+      - "5001:5001"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings__DefaultConnection=Host=didascaly-db;Database=didascaly_dev_db;Username=didascaly_user;Password=didascaly_secure_password
+    depends_on:
+      - didascaly-db
+    networks:
+      - didascaly-network
+
+volumes:
+  postgres_data:
+
+networks:
+  didascaly-network:
+    driver: bridge

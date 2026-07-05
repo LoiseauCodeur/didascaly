@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="Didascaly.Api/Didascaly.Api.csproj" />
+  <Project Path="Didascaly.Core/Didascaly.Core.csproj" />
+  <Project Path="Didascaly.Infrastructure/Didascaly.Infrastructure.csproj" />
+</Solution>

@@ -1,0 +1,6 @@
+@Didascaly.Api_HostAddress = http://localhost:5182
+
+GET {{Didascaly.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
