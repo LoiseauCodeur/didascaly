@@ -1,7 +1,7 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\Mohamed\\Desktop\\code\\didascaly\\API\\Didascaly.Infrastructure\\Didascaly.Infrastructure.csproj": {}
+    "C:\\Users\\Mohamed\\Desktop\\code\\didascaly\\API\\Didascaly.Infrastructure\\Didascaly.Infrastructure.csproj": {}
   },
   "projects": {
     "C:\\Users\\Mohamed\\Desktop\\code\\didascaly\\API\\Didascaly.Core\\Didascaly.Core.csproj": {
@@ -346,14 +346,14 @@
         }
       }
     },
-    "c:\\Users\\Mohamed\\Desktop\\code\\didascaly\\API\\Didascaly.Infrastructure\\Didascaly.Infrastructure.csproj": {
+    "C:\\Users\\Mohamed\\Desktop\\code\\didascaly\\API\\Didascaly.Infrastructure\\Didascaly.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\Mohamed\\Desktop\\code\\didascaly\\API\\Didascaly.Infrastructure\\Didascaly.Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\Mohamed\\Desktop\\code\\didascaly\\API\\Didascaly.Infrastructure\\Didascaly.Infrastructure.csproj",
         "projectName": "Didascaly.Infrastructure",
-        "projectPath": "c:\\Users\\Mohamed\\Desktop\\code\\didascaly\\API\\Didascaly.Infrastructure\\Didascaly.Infrastructure.csproj",
+        "projectPath": "C:\\Users\\Mohamed\\Desktop\\code\\didascaly\\API\\Didascaly.Infrastructure\\Didascaly.Infrastructure.csproj",
         "packagesPath": "C:\\Users\\Mohamed\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\Mohamed\\Desktop\\code\\didascaly\\API\\Didascaly.Infrastructure\\obj\\",
+        "outputPath": "C:\\Users\\Mohamed\\Desktop\\code\\didascaly\\API\\Didascaly.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
