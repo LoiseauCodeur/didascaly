@@ -14,7 +14,7 @@ services:
     networks:
       - didascaly-network
 
-  # 2. Le conteneur de ton backend .NET
+# 2. Le conteneur de ton backend .NET
   didascaly-api:
     container_name: didascaly-api
     build:
@@ -23,12 +23,15 @@ services:
     volumes:
       - ./API:/app
     working_dir: /app/Didascaly.Api
-    command: dotnet watch --non-interactive
+    # On ajoute le "run --urls" ici pour forcer le port avec le mode watch
+    command: dotnet watch run --urls http://0.0.0.0:5000 --non-interactive
     ports:
       - "5000:5000"
       - "5001:5001"
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
+      # On force l'URL aussi via les variables d'environnement (ceinture et bretelles)
+      - ASPNETCORE_URLS=http://0.0.0.0:5000
       - ConnectionStrings__DefaultConnection=Host=didascaly-db;Database=didascaly_dev_db;Username=didascaly_user;Password=didascaly_secure_password
     depends_on:
       - didascaly-db
